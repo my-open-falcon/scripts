@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORKSPACE=${GOPATH%%/}/src/github.com/open-falcon
+WORKSPACE=${GOPATH%%/}/src/github.com/my-open-falcon
 
 output_dir=$WORKSPACE/output
 tmp_dir=$WORKSPACE/tmp
@@ -11,11 +11,11 @@ echo "working at" $WORKSPACE
 echo "output dir is" $output_dir
 echo
 
-gitorg="https://github.com/open-falcon"
+gitorg="https://github.com/my-open-falcon"
 
 pre_components=(
-https://github.com/open-falcon/common,$GOPATH/src/github.com/open-falcon/common
-https://github.com/open-falcon/rrdlite,$GOPATH/src/github.com/open-falcon/rrdlite
+https://github.com/my-open-falcon/common,$GOPATH/src/github.com/my-open-falcon/common
+https://github.com/my-open-falcon/rrdlite,$GOPATH/src/github.com/my-open-falcon/rrdlite
 )
 for c in ${pre_components[@]};do
     repo=`echo -n $c | awk -F ',' '{print $1}'`
